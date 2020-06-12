@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <h1 id="title">Diet Survey</h1>
+        <p id="description">Please describe your current diet status. Thank you.</p>
+
+        <form id="survey-form">
+            <div id="intro-questions">
+                <label class="center-left" id="name-label" for="name">Name</label>
+                <input class="intro-label" type="text" id="name" name="name" placeholder="Enter your name..." required>
+                <br>
+
+                <label class="center-left" id="email-label" for="email">Email</label>
+                <input class="intro-label" type="email" id="email" name="email" placeholder="Enter your email..." required>
+                <br>
+
+                <label class="center-left" id="number-label" for="number">Age</label>
+                <input class="intro-label" type="number" id="number" name="number" placeholder="Enter your age..." min="1" max="130" required> <!--Define min/max attributes-->
+                <br>
+            </div>
+            <!--Drop down based on government income brackets-->
+            <div id="dropdown">
+                <label for="income">Please select your income:</label>
+                <select name="income">
+                <option value="poverty"> 0-$20,000       </option>
+                <option value="low"> $20,000-$44,999 </option>
+                <option value="middle">$45,000-$139,999 </option>
+                <option value="upper-middle">$140,000-$149,999</option>
+                <option value="high">$150,000-$199,999</option>
+                <option value="highest">+$200,000
+                </select>
+            </div>
+            <fieldset>
+                <legend>How would you currently describe your diet?</legend>
+                <div id="diet-field">
+                <div>
+                    <input type="radio" id="unhealthy-regular" value="unhealthy-regular" name="diet-type">
+                    <label for="unhealthy-regular">Unhealthy and regular</label>
+                </div>
+                <div>
+                    <input type="radio" id="healthy-regular" value="healthy-regular" name="diet-type">
+                    <label for="healthy-regular">Healthy and regular</label>
+                </div>
+                <div>
+                    <input type="radio" id="unhealthy-vegetarian" value="unhealthy-vegetarian" name="diet-type">
+                    <label for="unhealthy-vegetarian">Unhealthy vegetarian</label>
+                </div>
+                <div>
+                    <input type="radio" id="healthy-vegetarian" value="healthy-vegetarian" name="diet-type">
+                    <label for="healthy-vegetarian">Healthy vegetarian</label>
+                </div>
+                <div>
+                    <input type="radio" id="regular-vegan" value="regular-vegan" name="diet-type">
+                    <label for="regular-vegan">Regular vegan</label>
+                </div>
+                <div>
+                    <input type="radio" id="plant-vegan" value="plant-vegan" name="diet-type">
+                    <label for ="plant-vegan">Plant-based vegan</label>
+                </div>  
+                </div>              
+            </fieldset>
+            <fieldset id="action-field">
+                <legend>What steps are you willing to take to help the environment?</legend>
+                <label for="meat">Eat less meat</label>
+                <input type="checkbox" id="meat" name="environment" value="meat">
+                <label for = "seafood">Eat less seafood</label>
+                <input type="checkbox" id="seafood" name="environment" value="seafood">
+            </fieldset>
+            
+            <div>
+            <label for="comment-area">Any comments?</label>
+            <textarea id="comment-area" name="comment-area"></textarea>
+            </div>
+
+            <button id="submit">Submit</button>
+
+
+
+        </form>
+
+
+
+
+
+
+
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" ></script>
+    
+</body>
+</html>

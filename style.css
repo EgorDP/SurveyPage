@@ -1,0 +1,94 @@
+:root {
+    --seperating-space: 5%;
+}
+#main {
+    text-align:center;
+    color:rgb(255, 255, 255);
+    position:relative;
+    margin: 0 25% 0 25%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#main::before {  /*Have the transparent gradient image behind the main, works perfectly! */
+    position:absolute; 
+    content: ""; 
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+    opacity:0.45;
+    top:0;
+    left:0;
+    bottom: 0;
+    right:0;
+    z-index: -1;
+}
+body {
+    background-image: url(leaves.jpg);
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h1 {
+   font-size: 20px;
+}
+.center-left {
+    margin: 0 0 0 5.5%;
+    text-align:left;
+}
+
+
+
+#intro-questions{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.intro-label {
+    margin: 3% 5% 0 5%;  
+}
+
+
+#dropdown {
+    margin: 0 0 var(--seperating-space,7%) 0;
+}
+
+
+#diet-field {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  
+    
+}
+#diet-field div {
+    margin-left:40%;
+    padding-bottom:10px;
+}
+fieldset {
+    margin: 0 0 var(--seperating-space,7%) 0;
+}
+#comment-area {
+    width: 80%;
+    height: 100px;
+    margin: 0 10% 0 10%;
+}
+@media screen and (max-width:400px) {
+    #diet-field div{
+        margin-left:30%;
+        
+    }
+    #main {
+        font-size: 12px;
+        margin: 0 10% 0 10%;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    body {
+        background-size:cover;
+    }
+    #comment-area{
+        height: 60px;
+    }
+    
+}
